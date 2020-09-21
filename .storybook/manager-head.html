@@ -1,0 +1,424 @@
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC,
+      Microsoft YaHei, Simsun, Helvetica, Arial !important;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    color: #434343;
+    background: #fff !important;
+  }
+
+  ul,
+  li {
+    list-style: none;
+    padding: 0;
+  }
+
+  .css-rc1jbh.css-rc1jbh {
+    height: calc(100vh - 64px);
+  }
+
+  ._catalog-item-text,
+  ._catalog-text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  a:link,
+  a:visited {
+    color: #434343;
+  }
+
+  ._header-wrap {
+    background-color: #fff;
+    box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.09);
+    position: relative;
+    z-index: 1;
+    padding: 0 40px;
+  }
+
+  ._header-box {
+    margin-left: auto;
+    margin-right: auto;
+    height: 64px;
+    line-height: 64px;
+  }
+
+  ._logo-box {
+    padding-top: 10px;
+    height: 40px;
+    display: inline-block;
+  }
+
+  ._nav-list {
+    float: right;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+
+  ._nav-list a {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  ._nav-list a:link,
+  ._nav-list a:visited {
+    color: #434343;
+  }
+
+  ._nav-list a:hover {
+    color: #0083ff;
+  }
+
+  ._nav-item {
+    display: inline-block;
+  }
+
+  ._nav-item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  ._nav-item._current {
+    color: #0083ff;
+    border-bottom: 3px solid currentColor;
+  }
+
+  ._nav-item._current a:link,
+  ._nav-item._current a:visited {
+    color: #0083ff;
+  }
+  ._gh-ico {
+    width: 20px;
+    height: 20px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMTIgMTIgNDAgNDAiPjxwYXRoIGZpbGw9IiMzMzMiIGQ9Ik0zMiAxMy40Yy0xMC41IDAtMTkgOC41LTE5IDE5IDAgOC40IDUuNSAxNS41IDEzIDE4IDEgLjIgMS4zLS40IDEuMy0uOXYtMy4yYy01LjMgMS4xLTYuNC0yLjYtNi40LTIuNi0uOS0yLjEtMi4xLTIuNy0yLjEtMi43LTEuNy0xLjIuMS0xLjEuMS0xLjEgMS45LjEgMi45IDIgMi45IDIgMS43IDIuOSA0LjUgMi4xIDUuNSAxLjYuMi0xLjIuNy0yLjEgMS4yLTIuNi00LjItLjUtOC43LTIuMS04LjctOS40IDAtMi4xLjctMy43IDItNS4xLS4yLS41LS44LTIuNC4yLTUgMCAwIDEuNi0uNSA1LjIgMiAxLjUtLjQgMy4xLS43IDQuOC0uNyAxLjYgMCAzLjMuMiA0LjcuNyAzLjYtMi40IDUuMi0yIDUuMi0yIDEgMi42LjQgNC42LjIgNSAxLjIgMS4zIDIgMyAyIDUuMSAwIDcuMy00LjUgOC45LTguNyA5LjQuNy42IDEuMyAxLjcgMS4zIDMuNXY1LjJjMCAuNS40IDEuMSAxLjMuOSA3LjUtMi42IDEzLTkuNyAxMy0xOC4xIDAtMTAuNS04LjUtMTktMTktMTl6Ii8+PC9zdmc+);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  ._has-drop {
+    position: relative;
+  }
+
+  ._has-drop ._drop-list {
+    display: none;
+    position: absolute;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    width: 120px;
+    max-height: 272px;
+    overflow-y: auto;
+    border-radius: 4px;
+    left: -34px;
+  }
+
+  ._has-drop ._drop-hd {
+    position: relative;
+    padding-right: 15px;
+  }
+
+  ._has-drop ._drop-hd:after {
+    content: "";
+    position: absolute;
+    background-image: url("https://static.360buyimg.com/JDC_legao/css/i/icon.png");
+    width: 10px;
+    height: 6px;
+    top: 30px;
+    right: 0;
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    -webkit-transition: -webkit-transform 300ms;
+    transition: -webkit-transform 300ms;
+    transition: transform 300ms;
+    transition: transform 300ms, -webkit-transform 300ms;
+  }
+
+  ._has-drop ._drop-item {
+    line-height: 30px;
+    height: 32px;
+    padding-left: 16px;
+    padding-right: 10px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  ._has-drop ._drop-item a {
+    display: block;
+  }
+
+  ._has-drop ._drop-item a:hover,
+  ._has-drop ._drop-item a:link,
+  ._has-drop ._drop-item a:visited {
+    color: #434343;
+  }
+
+  ._has-drop ._drop-item._current {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+
+  ._has-drop ._drop-item:hover {
+    background-color: #e2f2ff;
+  }
+
+  ._has-drop.is-on ._drop-list,
+  ._has-drop:hover ._drop-list {
+    display: block;
+  }
+
+  ._has-drop.is-on ._drop-hd:after,
+  ._has-drop:hover ._drop-hd:after {
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+  }
+
+  .css-1qwztpk.css-1ys6kiw {
+    line-height: 36px;
+    font-size: 14px;
+    font-weight: 700;
+    padding-left: 40px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .css-3qjlvf.css-3qjlvf:hover,
+  .css-144qfcz.css-144qfcz:hover,
+  .css-1sll5zj.css-1sll5zj:hover {
+    background-color: #e2f2ff;
+    color: #666;
+  }
+
+  .css-3qjlvf.css-3qjlvf:hover {
+    color: #333;
+    background-color: #e2f2ff;
+  }
+
+  .css-1d2iskc.css-1d2iskc {
+    top: 88px;
+    height: calc(100vh - 80px);
+  }
+
+  .css-4b1qgw.css-4b1qgw {
+    line-height: 36px;
+    font-size: 14px;
+    font-weight: 700;
+    padding-left: 48px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .css-144qfcz.css-144qfcz {
+    line-height: 36px;
+    font-size: 14px;
+    padding-left: 48px;
+    color: #666;
+  }
+
+  .css-sqdry3.css-sqdry3 {
+    left: 273px !important;
+    top: 0 !important;
+    width: calc(100vw - 273px) !important;
+    height: 100% !important;
+  }
+
+  .css-sqdry3.css-sqdry3 .css-sqdry3 {
+    left: 0 !important;
+  }
+
+  .css-0 > .selected {
+    line-height: 36px;
+    color: #0083ff;
+    border-right: 2px solid #0083ff;
+    background-color: #e2f2ff;
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  .css-1vaewxi.css-1vaewxi {
+    padding-left: 48px;
+  }
+
+  .css-y7phwm.css-y7phwm {
+    min-width: 300px;
+  }
+
+  .css-97w6iy.css-97w6iy {
+    display: none;
+  }
+
+  .css-16z45m6.css-16z45m6 {
+    display: none;
+  }
+
+  .css-kpzrq4.css-kpzrq4 {
+    display: none;
+  }
+
+  .css-1sll5zj.css-1sll5zj {
+    padding-left: 48px;
+    color: #666;
+    height: 44px;
+    line-height: 44px;
+    font-size: 14px;
+  }
+
+  .css-1q7pov5.css-1q7pov5 {
+    width: 272px !important;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .css-1gv4ce5.css-1gv4ce5 {
+    display: none;
+  }
+
+
+  .css-1qkwt59.css-1qkwt59 {
+    box-shadow: none;
+  }
+
+  .sidebar-header.sidebar-header {
+    display: none;
+  }
+
+  .simplebar-content-wrapper {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .simplebar-placeholder {
+    width: 270px !important;
+  }
+
+  .css-1q7pov5 * {
+    outline: none;
+  }
+
+  /*.simplebar-scrollbar {
+   display: none !important;
+   right:0!important;
+}*/
+  .css-1214e4t .simplebar-track.simplebar-vertical {
+    right: 0 !important;
+  }
+
+  .simplebar-scrollbar {
+    width: 4px !important;
+  }
+
+  .simplebar-scrollbar::before {
+    border-radius: 4px !important;
+    background-color: rgba(0, 0, 0, 0.45) !important;
+  }
+
+  .sidebar-container:hover .simplebar-scrollbar {
+    display: block !important;
+  }
+
+  .simplebar-content-wrapper:hover::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  .simplebar-content-wrapper:hover::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.45);
+  }
+
+  .css-kswa8j.css-kswa8j,
+  .css-utlgh8.css-utlgh8 {
+    width: 231px;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  .sidebar-item.sidebar-item {
+    position: relative;
+    height: 44px;
+    padding-right: 40px;
+    word-spacing: 4px;
+  }
+
+  .sidebar-item.sidebar-item .sidebar-expander {
+    position: absolute;
+    width: 11px;
+    height: 4px;
+    right: 30px;
+    top: 50%;
+    border: none;
+    margin: 0;
+    -webkit-transform: rotate(0) translateY(-50%);
+    -ms-transform: rotate(0) translateY(-50%);
+    transform: rotate(0) translateY(-50%);
+    -webkit-transform-origin: 50% 0;
+    -ms-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transition: -webkit-transform 300ms;
+    transition: -webkit-transform 300ms;
+    transition: transform 300ms;
+    transition: transform 300ms, -webkit-transform 300ms;
+  }
+
+  .css-1sbepsv.css-1sbepsv {
+    background-position: 0 -8px;
+    background-image: url("http://static.360buyimg.com/JDC_legao/css/i/icon.png");
+  }
+
+  .sidebar-item.sidebar-item .css-1n9n0e6.css-1n9n0e6 {
+    border: none;
+    background-position: 0 -8px;
+    background-image: url("http://static.360buyimg.com/JDC_legao/css/i/icon.png");
+    transform: rotate(-180deg) translateY(-50%);
+  }
+
+  .css-164r41r .css-1sbepsv.css-1sbepsv {
+    background: none;
+  }
+
+  .css-1vyaud-inlineGlow.css-1vyaud-inlineGlow>svg+span,
+  .css-1v003h5-inlineGlow.css-1v003h5-inlineGlow>svg+span,
+  .css-ibnbm7-inlineGlow.css-ibnbm7-inlineGlow>svg+span,
+  .css-1x6qiku-inlineGlow.css-1x6qiku-inlineGlow>svg+span {
+    height: 16px;
+    margin-top: 12px;
+    background: #fff;
+    transform: translateX(40px);
+    padding: 0 20px;
+  }
+
+  .sidebar-item.sidebar-item {
+    width: 271px;
+  }
+
+</style>
+<link rel="icon" type="image/png" href="//www.jd.com/favicon.ico" />
+
+<div class="_header-wrap">
+  <div class="_header-box">
+    <a href="http://react.legao.jd.com" class="_logo-box">
+      <img src="https://img13.360buyimg.com/imagetools/jfs/t1/126520/35/13314/8092/5f687520Eb27352b8/a66fc2c6d51d3b95.png" />
+    </a>
+    <ul class="_nav-list">
+      <li class="_nav-item _has-drop">
+        <a href="http://legao.jd.com/index.html" class="">首页</a>
+      </li>
+      <li class="_nav-item _has-drop _current">
+        <a href="http://react.legao.jd.com" class="_drop-hd">组件</a>
+        <ul class="_drop-list">
+          <li class="_drop-item">
+            <a href="http://legao.jd.com/installation/installation.html">Legao jQuery</a>
+          </li>
+          <li class="_drop-item">
+            <a href="http://vue.legao.jd.com">Legao Vue</a>
+          </li>
+          <li class="_drop-item">
+            <a href="http://react.legao.jd.com">Legao React</a>
+          </li>
+        </ul>
+      </li>
+      <li class="_nav-item _has-drop _gh-ico">
+        <a href="http://legao.jd.com/resource.html" class=""></a>
+      </li>
+    </ul>
+  </div>
+</div>

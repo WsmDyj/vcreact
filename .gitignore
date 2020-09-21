@@ -1,0 +1,11 @@
+node_modules/
+
+yarn-error.log
+
+build/
+dist/
+lib/
+es/
+coverage/
+storybook-static/
+src/version/version.tsx

@@ -1,0 +1,38 @@
+import { Meta, Title, Subtitle } from "@storybook/addon-docs/blocks";
+
+<Meta title="开发指南/安装 Installation" />
+
+<Title children={"安装"} />
+
+<Subtitle children={"Installation"} />
+
+```shell
+
+yarn add @jdcfe/legao
+# or
+npm install --save @jdcfe/legao
+
+```
+
+### 备注
+
+组件库已同步更新至 NPM 官方源，京东内部使用可以切换至京东内部 NPM 源或其它国内源加快安装速度，[京东 NPM 源](http://npm.m.jd.com/) --registry=http://registry.m.jd.com/
+
+### 快速上手 Quickstart
+
+```tsx
+import React from "react";
+import ReactDOM from "react-dom";
+import { Countdown } from "@jdcfe/legao";
+import "@jdcfe/legao/dist/@jdcfe/legao.css"; //引入样式 如果你选择了按需加载方式则不需要引入
+ReactDOM.render(
+  <Countdown leftTime={100000}>
+    {({ dayStr, hourStr, minuteStr, secondStr }) => (
+      <span>
+        倒计时剩余： {dayStr}天{hourStr}小时{minuteStr}分钟{secondStr}秒
+      </span>
+    )}
+  </Countdown>,
+  document.getElementById("app")
+);
+```

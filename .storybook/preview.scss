@@ -1,0 +1,236 @@
+#docs-root {
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC,
+    Microsoft YaHei, Simsun, Helvetica, Arial;
+  -webkit-font-smoothing: antialiased !important;
+  font-size: 14px;
+  color: #434343;
+  background: #fff !important;
+}
+
+* {
+  outline: none;
+}
+.sbdocs-title.sbdocs-title {
+  display: inline-block;
+  font-size: 28px;
+  height: 45px;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 16px;
+  font-family: unset;
+  font-size: 28px;
+  font-weight: 700;
+}
+.sbdocs-subtitle.sbdocs-subtitle {
+  display: inline-block;
+  font-size: 28px;
+  height: 45px;
+  line-height: 1.5;
+  color: #aaa;
+  margin-bottom: 16px;
+  font-family: unset;
+  font-size: 28px;
+  color: #aaa;
+  padding-left: 16px;
+  font-weight: 700;
+}
+.css-d6ac3l.css-d6ac3l,
+.css-1p8ieni.css-1p8ieni {
+  font-family: unset;
+}
+/** body */
+.sbdocs-wrapper {
+  &.css-t7viak.css-t7viak {
+    padding: 80px;
+  }
+}
+.sbdocs-content {
+  width: 100%;
+  &.css-1gh4yjl.css-1gh4yjl {
+    max-width: none;
+  }
+}
+.sbdocs-ul {
+  &.css-d6ac3l.css-d6ac3l {
+    padding-left: 0;
+    font-family: unset;
+    margin: 0;
+
+    .sbdocs-li {
+      &.css-1ta8r1d.css-1ta8r1d {
+        position: relative;
+        color: #333;
+        font-family: unset;
+        line-height: 21px;
+        margin: 0;
+        padding: 0 0 0 22px;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 4px;
+          height: 4px;
+          margin-right: 16px;
+          background-color: #000;
+          border-radius: 50%;
+          left: 0;
+          top: 8px;
+        }
+      }
+    }
+  }
+}
+
+/** body title */
+.sbdocs-h3.sbdocs-h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 48px;
+  margin-bottom: 13px;
+  a {
+    svg {
+      display: none;
+    }
+    &:hover {
+      svg {
+        display: none;
+      }
+    }
+  }
+}
+
+.sbdocs-h3.sbdocs-h3:first-of-type {
+  margin-top: 64px;
+}
+
+.sbdocs-p.sbdocs-p {
+  margin-top: 0;
+  margin-bottom: 24px;
+  line-height: 21px;
+}
+
+/** body preview */
+.sbdocs-preview.sbdocs-preview {
+  border: 1px solid #e6e6e6;
+  box-shadow: none;
+  overflow: visible;
+  z-index: 2;
+}
+.sbdocs-preview.sbdocs-preview:hover {
+  z-index: 3;
+}
+.docblock-source.docblock-source {
+  border: 1px solid #e6e6e6;
+  box-shadow: none;
+}
+
+.sbdocs-preview,
+.css-2ltd27.css-2ltd27 {
+  font-size: 14px;
+}
+/** 解决预览区域超出后遮挡问题 lilong */
+.sbdocs-preview {
+  &.css-tmvzag.css-tmvzag {
+    overflow: visible;
+  }
+  .css-79elbk {
+    overflow: visible;
+    .css-gnhv4i {
+      overflow: visible;
+    }
+  }
+}
+.sb-show-main {
+  position: relative;
+}
+
+.css-gnhv4i.css-gnhv4i {
+  padding: 40px 40px 50px;
+  overflow: visible;
+}
+
+.css-gnhv4i.css-gnhv4i > * {
+  margin-top: 0;
+  margin-left: 40px;
+}
+.css-gnhv4i.css-gnhv4i > :first-of-type {
+  margin-left: 0;
+}
+
+.sbdocs-div.sbdocs-div,
+.css-1ilulqq.css-1ilulqq {
+  margin-top: 0;
+}
+.css-11xgcgt.css-11xgcgt {
+  z-index: 0;
+}
+
+.css-14m39zm.css-14m39zm {
+  font-size: 14px;
+}
+
+.css-umt53z pre code,
+.css-umt53z.hljs code {
+  line-height: 1.8;
+  font-family: Menlo, Monaco, Consolas, Courier, monospace;
+  font-size: 12px;
+}
+.css-1si67pu.css-1si67pu * .token {
+  font-family: unset;
+}
+.css-1si67pu.css-1si67pu * .token.comment {
+  font-style: normal;
+}
+/** footer */
+.footer-content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 72px;
+  bottom: 0;
+  z-index: 2;
+  padding-top: 5px;
+  text-align: center;
+  font-size: 18px;
+  color: #d2d2d2;
+  text-align: center;
+  line-height: 28px;
+}
+._mailto {
+  padding-left: 30px;
+  font-size: 12px;
+  color: #0083ff;
+  text-decoration: none;
+}
+._mailto:link,
+._mailto:visited {
+  color: #0083ff;
+}
+/*  API  表格*/
+.docblock-propstable.docblock-propstable.docblock-propstable {
+  border: 1px solid #ebebeb;
+  th {
+    padding: 14px 40px;
+    height: 36px;
+    line-height: 36px;
+    vertical-align: middle;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.04);
+    font-weight: 400;
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid #ebebeb;
+  }
+  td {
+    padding: 14px 40px;
+    border: none;
+    border-top: 1px solid #ebebeb;
+  }
+  tbody {
+    box-shadow: none;
+  }
+  .css-in3yi3 {
+    font-weight: normal;
+  }
+}
