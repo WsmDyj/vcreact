@@ -24,6 +24,10 @@
     overflow: hidden;
     white-space: nowrap;
   }
+  a {
+    display: inline-block;
+    text-decoration: none;
+  }
 
   a:link,
   a:visited {
@@ -39,21 +43,37 @@
   }
 
   ._header-box {
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: 64px;
-    line-height: 64px;
   }
 
   ._logo-box {
-    padding-top: 10px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+  }
+  ._logo-box_img {
+    width: 40px;
     height: 40px;
-    display: inline-block;
+  }
+  ._logo-box_text {
+    color:#EC9541;
+    font-size: 18px;
+    height: 64px;
+    line-height: 64px;
+    padding-left: 10px;
+    font-weight: bold;
+    font-family: Avenir,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    white-space: nowrap;
+    text-decoration: none;
   }
 
   ._nav-list {
-    float: right;
     font-size: 16px;
+    display: flex;
+    align-items: center;
     margin: 0;
     padding: 0;
   }
@@ -74,6 +94,7 @@
 
   ._nav-item {
     display: inline-block;
+    line-height: 64px;
   }
 
   ._nav-item:not(:last-child) {
@@ -96,82 +117,7 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
-  ._has-drop {
-    position: relative;
-  }
-
-  ._has-drop ._drop-list {
-    display: none;
-    position: absolute;
-    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
-    background-color: #fff;
-    width: 120px;
-    max-height: 272px;
-    overflow-y: auto;
-    border-radius: 4px;
-    left: -34px;
-  }
-
-  ._has-drop ._drop-hd {
-    position: relative;
-    padding-right: 15px;
-  }
-
-  ._has-drop ._drop-hd:after {
-    content: "";
-    position: absolute;
-    background-image: url("https://static.360buyimg.com/JDC_legao/css/i/icon.png");
-    width: 10px;
-    height: 6px;
-    top: 30px;
-    right: 0;
-    -webkit-transform: rotate(0);
-    -ms-transform: rotate(0);
-    transform: rotate(0);
-    -webkit-transition: -webkit-transform 300ms;
-    transition: -webkit-transform 300ms;
-    transition: transform 300ms;
-    transition: transform 300ms, -webkit-transform 300ms;
-  }
-
-  ._has-drop ._drop-item {
-    line-height: 30px;
-    height: 32px;
-    padding-left: 16px;
-    padding-right: 10px;
-    cursor: pointer;
-    font-size: 14px;
-  }
-
-  ._has-drop ._drop-item a {
-    display: block;
-  }
-
-  ._has-drop ._drop-item a:hover,
-  ._has-drop ._drop-item a:link,
-  ._has-drop ._drop-item a:visited {
-    color: #434343;
-  }
-
-  ._has-drop ._drop-item._current {
-    background-color: rgba(0, 0, 0, 0.04);
-  }
-
-  ._has-drop ._drop-item:hover {
-    background-color: #e2f2ff;
-  }
-
-  ._has-drop.is-on ._drop-list,
-  ._has-drop:hover ._drop-list {
-    display: block;
-  }
-
-  ._has-drop.is-on ._drop-hd:after,
-  ._has-drop:hover ._drop-hd:after {
-    -webkit-transform: rotate(-180deg);
-    -ms-transform: rotate(-180deg);
-    transform: rotate(-180deg);
-  }
+  
 
   .css-1qwztpk.css-1ys6kiw {
     line-height: 36px;
@@ -395,29 +341,19 @@
 
 <div class="_header-wrap">
   <div class="_header-box">
-    <a href="http://react.legao.jd.com" class="_logo-box">
-      <img src="https://img13.360buyimg.com/imagetools/jfs/t1/126520/35/13314/8092/5f687520Eb27352b8/a66fc2c6d51d3b95.png" />
+    <a href="" class="_logo-box">
+      <img class="_logo-box_img" src="https://img14.360buyimg.com/imagetools/jfs/t1/132088/39/10629/5473/5f699464E5160846d/c066c0996d40268f.png" />
+      <span class="_logo-box_text">Vc React</span>
     </a>
     <ul class="_nav-list">
       <li class="_nav-item _has-drop">
-        <a href="http://legao.jd.com/index.html" class="">首页</a>
+        <a href="" class="">首页</a>
       </li>
       <li class="_nav-item _has-drop _current">
-        <a href="http://react.legao.jd.com" class="_drop-hd">组件</a>
-        <ul class="_drop-list">
-          <li class="_drop-item">
-            <a href="http://legao.jd.com/installation/installation.html">Legao jQuery</a>
-          </li>
-          <li class="_drop-item">
-            <a href="http://vue.legao.jd.com">Legao Vue</a>
-          </li>
-          <li class="_drop-item">
-            <a href="http://react.legao.jd.com">Legao React</a>
-          </li>
-        </ul>
+        <a href="" >组件</a>
       </li>
       <li class="_nav-item _has-drop _gh-ico">
-        <a href="http://legao.jd.com/resource.html" class=""></a>
+        <a href="" ></a>
       </li>
     </ul>
   </div>
