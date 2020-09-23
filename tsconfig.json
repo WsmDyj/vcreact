@@ -6,7 +6,20 @@
     "declaration": true,
     "jsx": "react",
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
   },
   "exclude": [
     "node_modules",
@@ -14,6 +27,6 @@
     "src/**/*.stories.tsx/**"
   ],
   "include": [
-    "src/**/*",
+    "src/**/*"
   ]
 }
