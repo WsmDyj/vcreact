@@ -30,6 +30,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
     "@storybook/addon-actions": "^6.0.21",
     "@storybook/addon-essentials": "^6.0.21",
     "@storybook/addon-links": "^6.0.21",
@@ -44,10 +46,18 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "@typescript-eslint/eslint-plugin": "^4.2.0",
+    "@typescript-eslint/parser": "^4.2.0",
     "babel-loader": "^8.1.0",
     "cross-env": "^7.0.2",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.2",
     "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
     "node-sass": "^4.14.1",
+    "prettier": "^2.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-is": "^16.13.1",
@@ -55,13 +65,11 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "start": "react-scripts start",
     "lint": "eslint --ext js,ts,tsx src --max-warnings 5",
     "build": "rimraf ./dist && npm run build-ts && npm run build-css",
     "test": "react-scripts test",
     "test:nowatch": "cross-env CI=true react-scripts test",
-    "eject": "react-scripts eject",
-    "dev": "start-storybook -p 6006 -s public",
+    "start": "start-storybook -p 6006 -s public",
     "build-ts": "tsc -p tsconfig.json",
     "build-css": "node-sass ./src/styles/index.scss  ./dist/index.css",
     "build-storybook": "build-storybook -s public",
@@ -81,10 +89,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test:nowatch && npm run lint"
-    }
   }
 }
