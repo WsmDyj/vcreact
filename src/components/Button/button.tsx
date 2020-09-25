@@ -2,11 +2,10 @@ import React from 'react'
 import classnames from 'classnames'
 import { tuple } from '../_util/type'
 
-
-const ButtonSize = tuple("medium", "small")
-export type ButtonSize = (typeof ButtonSize)[number]
-const ButtonType = tuple('primary', 'default', 'danger', 'link')
-export type ButtonType = (typeof ButtonType)[number]
+const ButtonSize1 = tuple('medium', "small")
+export type ButtonSize = (typeof ButtonSize1)[number]
+const ButtonType2 = tuple('primary', 'default', 'danger', 'link')
+export type ButtonType = (typeof ButtonType2)[number]
 
 interface BaseButtonProps {
   className?: string
@@ -22,12 +21,12 @@ export type AnchorButtonProps = {
   target?: string
   onClick?: React.MouseEventHandler<any>
 } & BaseButtonProps &
-  Omit<React.AnchorHTMLAttributes<any>, 'type'>
+Omit<React.AnchorHTMLAttributes<any>, 'type'>
 
 export type NativeButtonProps = {
   onClick?: React.MouseEventHandler<any>
 } & BaseButtonProps &
-  Omit<React.ButtonHTMLAttributes<any>, 'type'>
+Omit<React.ButtonHTMLAttributes<any>, 'type'>
 
 export type ButtonProps = Partial<AnchorButtonProps & NativeButtonProps>
 
@@ -62,5 +61,4 @@ const Button: React.FC<ButtonProps> = (props) => {
     )
   }
 }
-
 export default Button
