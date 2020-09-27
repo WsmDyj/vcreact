@@ -2,10 +2,10 @@ import React from 'react'
 import classnames from 'classnames'
 import { tuple } from '../_util/type'
 
-const ButtonSize = tuple('medium', 'small')
-export type ButtonSize = typeof ButtonSize[number]
-const ButtonType = tuple('primary', 'default', 'danger', 'link')
-export type ButtonType = typeof ButtonType[number]
+const ButtonSizes = tuple('medium', 'small')
+export type ButtonSize = typeof ButtonSizes[number]
+const ButtonTypes = tuple('primary', 'default', 'danger', 'link')
+export type ButtonType = typeof ButtonTypes[number]
 
 interface BaseButtonProps {
   className?: string
@@ -36,7 +36,7 @@ const Button: React.FC<ButtonProps> = (props) => {
   const classes = classnames('btn', className, {
     [`btn-${type}`]: type,
     [`btn-${size}`]: size,
-    disable: type === 'link' && disabled,
+    disable: type === 'link' && disabled
   })
 
   if (type === 'link' && href) {

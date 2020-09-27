@@ -1,9 +1,9 @@
-import React  from 'react'
+import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 import Button from './button'
 
 const defaultProps = {
-  onClick: jest.fn(),
+  onClick: jest.fn()
 }
 
 describe('test Button component', () => {
@@ -11,7 +11,7 @@ describe('test Button component', () => {
     const wrapper = render(<Button {...defaultProps}>Nice</Button>)
     const element = wrapper.getByText('Nice') as HTMLButtonElement
     expect(element.tagName).toEqual('BUTTON')
-    fireEvent.click(element) // 检查函数到底被调用没
+    fireEvent.click(element)
     expect(defaultProps.onClick).toHaveBeenCalled()
   })
 })

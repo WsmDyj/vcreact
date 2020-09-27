@@ -1,25 +1,45 @@
 {
   "compilerOptions": {
+    "outDir": "dist",
+    "module": "commonjs",
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
+    "lib": ["ES5","ES6","ES7","DOM","DOM.Iterable"],
+    "sourceMap": false,
+    "allowJs": false,
+    "jsx": "react",
     "moduleResolution": "node",
+    "rootDir": "src",
+    "baseUrl": "src",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": false,
+    "noImplicitAny": false,
+    "emitDeclarationOnly": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": false,
+    "declarationDir": "dist",
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "noUnusedParameters": false,
+    "types": [
+      "node",
+      "jest"
+    ],
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react"
+    "esModuleInterop": true
   },
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
+    "scripts",
+    "**/__test__/*",
+    "src/**/stories/**"
+  ],
   "include": [
-    "src"
+    "src/**/*",
+    "types/**/*"
   ]
 }

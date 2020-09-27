@@ -1,11 +1,11 @@
 const fs = require('fs')
 
 module.exports = {
-  extends: [
-    '@commitlint/config-conventional'
-  ],
+  extends: ['@commitlint/config-conventional'],
   rules: {
-    'type-enum': [2, 'always',
+    'type-enum': [
+      2,
+      'always',
       [
         'release',
         'update',
@@ -22,17 +22,7 @@ module.exports = {
         'merge'
       ].concat(fs.readdirSync('src'))
     ],
-    'type-case': [2, 'always',
-      [
-        'lower-case',
-        'camel-case'
-      ]
-    ],
-    'scope-case': [2, 'always',
-      [
-        'lower-case',
-        'camel-case'
-      ]
-    ]
+    'type-case': [2, 'always', ['lower-case', 'camel-case']],
+    'scope-case': [2, 'always', ['lower-case', 'camel-case']]
   }
 }
