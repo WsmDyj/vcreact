@@ -1,0 +1,56 @@
+import {
+  Meta,
+  Story,
+  Preview,
+  Props,
+  ArgsTable,
+  Source,
+  Title,
+  Subtitle,
+} from "@storybook/addon-docs/blocks"
+import Icon from "../index"
+import Demo from './Demo'
+import "./demo.scss"
+
+<Meta title="基础/图标 Iconfont" component={Icon} />
+
+<Title children={"图标"} />
+
+<Subtitle children={"Icon"} />
+
+提供了一套常用的图标集合。
+
+### 图标集合
+
+图标库采用的是[Font Awesome](https://fontawesome.com/icons?d=listing&m=free)中提供的免费开源版本库
+
+<Preview>
+  <div className="icon-demo-list">
+    <div className="icon-item">
+      <Icon icon="address-book"/>
+      address-book
+    </div>
+    <div className="icon-item">
+      <Icon icon="angle-left"/>
+      angle-left
+    </div>
+  </div>
+</Preview>
+
+### 不同尺寸
+Icon 组件提供了灵活多变的尺寸，可以在不同场景下配置合适的按钮尺寸。
+<Preview>
+  <Icon icon="coffee" size="xs"/>
+  <Icon icon="coffee" size="lg"/>
+  <Icon icon="coffee" size="2x"/>
+</Preview>
+
+### 动画图标
+使用spin该类可旋转任何图标，pulse类用八个步骤来旋转Icon
+<Preview>
+  <Icon icon="circle-notch" spin/>
+  <Icon icon="spinner" pulse />
+</Preview>
+
+### Attributes
+<Props of={Demo} />

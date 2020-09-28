@@ -1,11 +1,46 @@
 {
   "name": "vcreact",
-  "version": "0.1.0",
-  "private": true,
-  "main": "build/index.js",
-  "module": "build/index.js",
-  "types": "build/index.d.ts",
+  "version": "0.1.1",
+  "description": "VC React components library",
+  "author": "vc",
+  "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "keywords": [
+    "Component",
+    "UI",
+    "React"
+  ],
+  "homepage": "https://github.com/WsmDyj/vcreact",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WsmDyj/vcreact"
+  },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
+    "classnames": "^2.2.6"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@storybook/addon-actions": "^6.0.21",
+    "@storybook/addon-essentials": "^6.0.21",
+    "@storybook/addon-links": "^6.0.21",
+    "@storybook/node-logger": "^6.0.21",
+    "@storybook/preset-create-react-app": "^3.1.4",
+    "@storybook/react": "^6.0.21",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -14,14 +49,22 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
-    "@typescript-eslint/eslint-plugin": "^4.0.1",
-    "@typescript-eslint/parser": "^4.0.1",
-    "classnames": "^2.2.6",
+    "@typescript-eslint/eslint-plugin": "4.0.1",
+    "@typescript-eslint/parser": "4.0.1",
+    "babel-loader": "^8.1.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.2",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
     "node-sass": "^4.14.1",
+    "prettier": "^2.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-is": "^16.13.1",
     "react-scripts": "3.4.3",
-    "sass-loader": "^10.0.2",
     "typescript": "~3.7.2"
   },
   "devDependencies": {
@@ -41,17 +84,15 @@
     "react-is": "^16.13.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "rimraf ./build && npm run build-ts && npm run build-css",
+    "lint": "eslint --ext js,ts,tsx src --max-warnings 5",
+    "build": "rimraf ./dist && npm run build-ts && npm run build-css",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "dev": "start-storybook -p 6006 -s public",
-    "build-ts": "tsc -p tsconfig.build.json",
-    "build-css": "node-sass ./src/styles/index.scss  ./build/index.css",
-    "build-storybook": "build-storybook -s public"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "test:nowatch": "cross-env CI=true react-scripts test",
+    "start": "start-storybook -p 6006 -c .storybook",
+    "build-ts": "tsc -p tsconfig.json",
+    "build-css": "node-sass ./src/styles/index.scss  ./dist/index.css",
+    "build-storybook": "build-storybook -s public",
+    "prepublishOnly": "npm run test:nowatch && npm run lint && npm run build"
   },
   "browserslist": {
     "production": [
@@ -63,6 +104,18 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{tsx,ts}": [
+      "npm run test:nowatch",
+      "npm run lint"
     ]
   }
 }

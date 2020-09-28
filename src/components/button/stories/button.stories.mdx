@@ -6,10 +6,10 @@ import {
   Source,
   Title,
   Subtitle,
-} from "@storybook/addon-docs/blocks";
-import Button from '../components/Button/button'
+} from "@storybook/addon-docs/blocks"
+import Button from '../index'
 
-<Meta title="组件/通用/按钮 Button" component={Button} />
+<Meta title="组件/通用/Button 按钮" component={Button} />
 
 <Title children={"按钮"} />
 
@@ -34,3 +34,11 @@ import Button from '../components/Button/button'
   <Button size="large">Large</Button>
   <Button size="small">Small</Button>
 </Preview>
+
+### API
+
+```tsx
+import { Button } from "@jdcfe/legao";
+```
+
+<Props of={Button} />
