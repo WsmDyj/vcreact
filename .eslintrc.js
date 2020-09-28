@@ -31,6 +31,7 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error',
     'no-var-requires': 'off',
+    "react/prop-types": 'off',
     'comma-dangle': ['error', 'never'],
     '@typescript-eslint/no-var-requires': ['off'],
     '@typescript-eslint/no-unused-vars': ['error'],

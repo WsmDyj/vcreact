@@ -14,10 +14,6 @@
     padding: 0;
   }
 
-  .css-rc1jbh.css-rc1jbh {
-    height: calc(100vh - 64px);
-  }
-
   ._catalog-item-text,
   ._catalog-text {
     text-overflow: ellipsis;
@@ -117,61 +113,34 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
-  
-
-  .css-1qwztpk.css-1ys6kiw {
+  /* 左边导航 */
+  .css-1qwztpk {
     line-height: 36px;
     font-size: 14px;
     font-weight: 700;
-    padding-left: 40px;
+    margin-left: 0px;
     position: relative;
     cursor: pointer;
   }
-
-  .css-3qjlvf.css-3qjlvf:hover,
-  .css-144qfcz.css-144qfcz:hover,
+  .os-content {
+    padding: 10px 20px 0 20px !important; 
+  }
+  /* 左边导航hover */
+  .css-14f47rf.css-14f47rf {
+    font-weight: normal;
+    color: #666!important;
+    padding-left: 50px!important; 
+  }
+  .css-rp1rfu {
+    padding-left: 50px!important; 
+  }
+  .css-14f47rf.css-14f47rf:hover,
+  .css-zr8yd2.css-zr8yd2:hover,
   .css-1sll5zj.css-1sll5zj:hover {
     background-color: #e2f2ff;
-    color: #666;
-  }
-
-  .css-3qjlvf.css-3qjlvf:hover {
     color: #333;
-    background-color: #e2f2ff;
   }
-
-  .css-1d2iskc.css-1d2iskc {
-    top: 88px;
-    height: calc(100vh - 80px);
-  }
-
-  .css-4b1qgw.css-4b1qgw {
-    line-height: 36px;
-    font-size: 14px;
-    font-weight: 700;
-    padding-left: 48px;
-    position: relative;
-    cursor: pointer;
-  }
-
-  .css-144qfcz.css-144qfcz {
-    line-height: 36px;
-    font-size: 14px;
-    padding-left: 48px;
-    color: #666;
-  }
-
-  .css-sqdry3.css-sqdry3 {
-    left: 273px !important;
-    top: 0 !important;
-    width: calc(100vw - 273px) !important;
-    height: 100% !important;
-  }
-
-  .css-sqdry3.css-sqdry3 .css-sqdry3 {
-    left: 0 !important;
-  }
-
+  /* 选中 */
   .css-0 > .selected {
     line-height: 36px;
     color: #0083ff;
@@ -180,6 +149,30 @@
     font-size: 14px;
     font-weight: normal;
   }
+  .css-zr8yd2:focus {
+    background: none!important;
+  }
+  /* 整体高度 */
+  .css-rc1jbh.css-rc1jbh {
+    height: calc(100vh - 64px);
+  }
+  /* 右边 */
+  .css-sqdry3.css-sqdry3 {
+    left: 273px !important;
+    top: 0 !important;
+    width: calc(100vw - 273px) !important;
+    height: 100% !important;
+  }
+  .css-sqdry3.css-sqdry3 .css-sqdry3 {
+    left: 0 !important;
+  }
+  .css-p1dfi6, .css-etla6h {
+    display: none;
+  }
+  /* 左侧顶部图标 */
+  .sidebar-header.sidebar-header {
+    display: none;
+  }
 
   .css-1vaewxi.css-1vaewxi {
     padding-left: 48px;
@@ -187,18 +180,6 @@
 
   .css-y7phwm.css-y7phwm {
     min-width: 300px;
-  }
-
-  .css-97w6iy.css-97w6iy {
-    display: none;
-  }
-
-  .css-16z45m6.css-16z45m6 {
-    display: none;
-  }
-
-  .css-kpzrq4.css-kpzrq4 {
-    display: none;
   }
 
   .css-1sll5zj.css-1sll5zj {
@@ -223,10 +204,6 @@
     box-shadow: none;
   }
 
-  .sidebar-header.sidebar-header {
-    display: none;
-  }
-
   .simplebar-content-wrapper {
     padding: 0 !important;
     margin: 0 !important;
@@ -240,51 +217,27 @@
     outline: none;
   }
 
-  /*.simplebar-scrollbar {
-   display: none !important;
-   right:0!important;
-}*/
-  .css-1214e4t .simplebar-track.simplebar-vertical {
-    right: 0 !important;
-  }
-
-  .simplebar-scrollbar {
+  /* 左边滚动条 */
+  .os-scrollbar-handle {
     width: 4px !important;
   }
-
-  .simplebar-scrollbar::before {
-    border-radius: 4px !important;
-    background-color: rgba(0, 0, 0, 0.45) !important;
+  .css-17bgnci.css-17bgnci.css-17bgnci.css-17bgnci.css-17bgnci .os-scrollbar-vertical {
+    right: 0px !important;
   }
-
-  .sidebar-container:hover .simplebar-scrollbar {
-    display: block !important;
+  a:link, a:visited {
+    color: #333;
   }
-
-  .simplebar-content-wrapper:hover::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
-  }
-
-  .simplebar-content-wrapper:hover::-webkit-scrollbar-thumb {
-    border-radius: 4px;
-    background-color: rgba(0, 0, 0, 0.45);
-  }
-
-  .css-kswa8j.css-kswa8j,
-  .css-utlgh8.css-utlgh8 {
-    width: 231px;
-    margin-top: 20px;
-    margin-bottom: 0;
-  }
-
+  /* 导航 */
   .sidebar-item.sidebar-item {
     position: relative;
+    width: 271px;
     height: 44px;
-    padding-right: 40px;
+    font-weight: normal;
+    padding-left: 40px;
     word-spacing: 4px;
+    font-size: 14px;
+    line-height: 36px;
   }
-
   .sidebar-item.sidebar-item .sidebar-expander {
     position: absolute;
     width: 11px;
@@ -304,38 +257,27 @@
     transition: transform 300ms;
     transition: transform 300ms, -webkit-transform 300ms;
   }
+  .sidebar-svg-icon.sidebar-svg-icon {
+    display: none;
+  }
+  .css-ttqtth {
+    padding-left: 10px;
+  }
 
-  .css-1sbepsv.css-1sbepsv {
+  .css-1qjuh5s.css-1qjuh5s {
     background-position: 0 -8px;
     background-image: url("http://static.360buyimg.com/JDC_legao/css/i/icon.png");
   }
 
-  .sidebar-item.sidebar-item .css-1n9n0e6.css-1n9n0e6 {
+  .css-1qjuh5s, .css-1y1vier {
+    left: auto!important;
+  }
+  .sidebar-item.sidebar-item .css-1y1vier.css-1y1vier {
     border: none;
     background-position: 0 -8px;
     background-image: url("http://static.360buyimg.com/JDC_legao/css/i/icon.png");
     transform: rotate(-180deg) translateY(-50%);
   }
-
-  .css-164r41r .css-1sbepsv.css-1sbepsv {
-    background: none;
-  }
-
-  .css-1vyaud-inlineGlow.css-1vyaud-inlineGlow>svg+span,
-  .css-1v003h5-inlineGlow.css-1v003h5-inlineGlow>svg+span,
-  .css-ibnbm7-inlineGlow.css-ibnbm7-inlineGlow>svg+span,
-  .css-1x6qiku-inlineGlow.css-1x6qiku-inlineGlow>svg+span {
-    height: 16px;
-    margin-top: 12px;
-    background: #fff;
-    transform: translateX(40px);
-    padding: 0 20px;
-  }
-
-  .sidebar-item.sidebar-item {
-    width: 271px;
-  }
-
 </style>
 <link rel="icon" type="image/png" href="//www.jd.com/favicon.ico" />
 

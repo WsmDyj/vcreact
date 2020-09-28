@@ -160,9 +160,6 @@
 .css-1ilulqq.css-1ilulqq {
   margin-top: 0;
 }
-.css-11xgcgt.css-11xgcgt {
-  z-index: 0;
-}
 
 .css-14m39zm.css-14m39zm {
   font-size: 14px;
@@ -180,52 +177,26 @@
 .css-1si67pu.css-1si67pu * .token.comment {
   font-style: normal;
 }
-/** footer */
-.footer-content {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 72px;
-  bottom: 0;
-  z-index: 2;
-  padding-top: 5px;
-  text-align: center;
-  font-size: 18px;
-  color: #d2d2d2;
-  text-align: center;
-  line-height: 28px;
-}
-._mailto {
-  padding-left: 30px;
-  font-size: 12px;
-  color: #0083ff;
-  text-decoration: none;
-}
-._mailto:link,
-._mailto:visited {
-  color: #0083ff;
-}
+
 /*  API  表格*/
-.docblock-propstable.docblock-propstable.docblock-propstable {
-  border: 1px solid #ebebeb;
+.css-6hhrgj.css-6hhrgj {
+  // border: 1px solid #ebebeb;
   th {
     padding: 14px 40px;
     height: 36px;
     line-height: 36px;
     vertical-align: middle;
+    color: #909399;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.04);
     font-weight: 400;
     font-size: 14px;
-    border: none;
-    border-bottom: 1px solid #ebebeb;
+    border-bottom: 1px solid #dcdfe6!important;
   }
   td {
-    padding: 14px 40px;
+    padding: 15px 40px;
     border: none;
-    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #dcdfe6!important;
   }
   tbody {
     box-shadow: none;
@@ -233,4 +204,10 @@
   .css-in3yi3 {
     font-weight: normal;
   }
+}
+.css-6hhrgj.css-6hhrgj tr:first-child th:first-child {
+  border-top-left-radius: 0px!important;
+}
+.css-6hhrgj tr:last-child th:first-child {
+  border-bottom-left-radius: 0px!important;
 }

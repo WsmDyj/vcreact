@@ -22,6 +22,9 @@
     "dist"
   ],
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "classnames": "^2.2.6"
   },
   "peerDependencies": {
@@ -69,7 +72,7 @@
     "build": "rimraf ./dist && npm run build-ts && npm run build-css",
     "test": "react-scripts test",
     "test:nowatch": "cross-env CI=true react-scripts test",
-    "start": "start-storybook -p 6006 -s public",
+    "start": "start-storybook -p 6006 -c .storybook",
     "build-ts": "tsc -p tsconfig.json",
     "build-css": "node-sass ./src/styles/index.scss  ./dist/index.css",
     "build-storybook": "build-storybook -s public",

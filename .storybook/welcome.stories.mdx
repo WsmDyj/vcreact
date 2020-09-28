@@ -36,3 +36,37 @@ ReactDOM.render(
   document.getElementById("app")
 );
 ```
+
+### 按需加载(2.0+)
+
+> legao 2.0 版本开始 JS 代码默认支持基于 ES modules 的 tree shaking。
+
+下面方式可以**只加载**用到的组件
+
+  使用 [babel-plugin-import](https://github.com/ant-design/babel-plugin-import)（推荐）。
+
+  ```javascript
+    // babel 7  .babelrc or babel-loader option
+
+    {
+      "plugins": [
+        [
+          "import",
+          {
+            "libraryName": "@jdcfe/legao",
+            "libraryDirectory": "lib",
+            "style": true,//`style: "css"`会加载css文件, `style: true` 会加载 scss 文件,则必须引入sass-loader
+            "camel2DashComponentName":false
+          }
+        ]
+      ]
+    }
+
+  ```
+
+  然后只需从 @jdcfe/legao 引入模块即可，无需单独引入样式。
+  ```tsx
+  // babel-plugin-import 会帮助你加载 JS 和 css
+
+  import { Button } from "@jdcfe/legao";
+  ```

@@ -4,4 +4,6 @@
 
 @import "mixins.scss";
 
-@import "../components/Button/style";
+@import "../components/button/style/index.scss";
+
+@import "../components/icon/style/index.scss";
