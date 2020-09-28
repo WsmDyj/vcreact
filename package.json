@@ -75,7 +75,7 @@
     "start": "start-storybook -p 6006 -c .storybook",
     "build-ts": "tsc -p tsconfig.json",
     "build-css": "node-sass ./src/styles/index.scss  ./dist/index.css",
-    "build-storybook": "build-storybook -s public",
+    "build-storybook": "build-storybook  -c .storybook -o storybook-static",
     "prepublishOnly": "npm run test:nowatch && npm run lint && npm run build"
   },
   "browserslist": {
