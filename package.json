@@ -1,6 +1,6 @@
 {
   "name": "vcreact",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "VC React components library",
   "author": "vc",
   "private": false,
@@ -22,9 +22,6 @@
     "dist"
   ],
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.30",
-    "@fortawesome/free-solid-svg-icons": "^5.14.0",
-    "@fortawesome/react-fontawesome": "^0.1.11",
     "classnames": "^2.2.6"
   },
   "peerDependencies": {
@@ -32,6 +29,9 @@
     "react-dom": ">=16.8.0"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "@babel/core": "^7.11.6",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
