@@ -3,13 +3,7 @@
     "outDir": "dist",
     "module": "esnext",
     "target": "es5",
-    "lib": [
-      "ES5",
-      "ES6",
-      "ES7",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ES5", "ES6", "ES7", "DOM", "DOM.Iterable"],
     "sourceMap": false,
     "allowJs": false,
     "jsx": "react",
