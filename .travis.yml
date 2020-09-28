@@ -10,7 +10,6 @@ env:
   - CI=ture
 script:
   - npm run build-storybook
-  - travis_wait 30
 deploy:
   provider: pages
   skip_cleanup: true
