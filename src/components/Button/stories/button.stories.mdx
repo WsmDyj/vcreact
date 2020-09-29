@@ -1,0 +1,44 @@
+import {
+  Meta,
+  Story,
+  Preview,
+  Props,
+  Source,
+  Title,
+  Subtitle,
+} from "@storybook/addon-docs/blocks"
+import Button from '../../Button'
+
+<Meta title="组件/通用/Button 按钮" component={Button} />
+
+<Title children={"按钮"} />
+
+<Subtitle children={"Button"} />
+
+常用的操作按钮。
+
+### 不同样式
+
+> 使用 type 属性来定义 Button 的样式。
+
+<Preview>
+  <Button>默认按钮</Button>
+  <Button type="primary">主要按钮</Button>
+  <Button type="danger">主要按钮</Button>
+</Preview>
+
+### 不同大小
+> 使用 size 属性来定义 Button 的按钮大小。
+
+<Preview>
+  <Button size="large">Large</Button>
+  <Button size="small">Small</Button>
+</Preview>
+
+### API
+
+```tsx
+import { Button } from "@jdcfe/legao";
+```
+
+<Props of={Button} />
