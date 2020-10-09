@@ -50,6 +50,12 @@
     max-width: none;
   }
 }
+.sbdocs-wrapper.css-t7viak.css-t7viak {
+  padding: 60px 80px 80px 80px;
+}
+.css-1x402t {
+  margin: 0!important;
+}
 .sbdocs-ul {
   &.css-d6ac3l.css-d6ac3l {
     padding-left: 0;
@@ -180,16 +186,18 @@
 
 /*  API  表格*/
 .css-6hhrgj.css-6hhrgj {
-  // border: 1px solid #ebebeb;
+  border: 1px solid #ebebeb;
   th {
     padding: 14px 40px;
     height: 36px;
     line-height: 36px;
     vertical-align: middle;
-    color: #909399;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    font-weight: 400;
+    background: #f7f7f7;
+    white-space: nowrap;
+    color: #5c6b77;
+    font-weight: 600;
     font-size: 14px;
     border-bottom: 1px solid #dcdfe6!important;
   }

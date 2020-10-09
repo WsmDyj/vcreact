@@ -5,7 +5,7 @@ interface IIconProps {
   icon: string
   /**
    * 图标自定义class
-   *
+   * cda
    * @default
    **/
   className?: string

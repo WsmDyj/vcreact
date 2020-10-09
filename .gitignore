@@ -2,8 +2,5 @@ node_modules/
 
 yarn.lock
 package-lock.json
-.DS_Store
-build/
 dist/
-lib/
 storybook-static/
