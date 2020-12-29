@@ -36,7 +36,6 @@
     "classnames": "^2.2.6",
     "omit.js": "^2.0.2"
   },
- 
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@commitlint/cli": "^11.0.0",
