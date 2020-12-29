@@ -4,9 +4,8 @@ language: node_js
 node_js:
   - "stable"
 cache:
-  npm: false
-install:
-  - npm install
+  directories:
+    - node_modules
 env:
   - CI=ture
 script:
