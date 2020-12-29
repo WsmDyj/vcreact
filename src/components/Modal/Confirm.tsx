@@ -36,7 +36,7 @@ export default function confirm(config: ModalProps) {
       div.parentNode.removeChild(div)
     }
   }
-  function close(...args: any[]) {
+  function close(this: any, ...args: any[]) {
     destroy()
     currentConfig = {
       ...currentConfig,

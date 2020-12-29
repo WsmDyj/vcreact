@@ -59,7 +59,7 @@ const Modal: React.FC<ModalProps> = (props) => {
   const prefixCls = getPrefixCls('modal')
 
   const { visible, footer, children, closeIcon, ...restProps } = props
-  const handleCancel = (e: React.MouseEvent<HTMLElement>) => {
+  const handleCancel = (e: any) => {
     const { onCancel } = props
     if (onCancel) {
       onCancel(e)
