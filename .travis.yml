@@ -6,11 +6,13 @@ node_js:
 cache:
   directories:
     - node_modules
+before_install:
+  - npm uninstall @storybook/react -g
+install: 
+  - npm install
 env:
   - CI=ture
 script:
-  - yarn cache clean
-  - npm cache clean --force
   - npm run build-storybook
 deploy:
   provider: pages
