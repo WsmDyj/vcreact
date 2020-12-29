@@ -36,10 +36,7 @@
     "classnames": "^2.2.6",
     "omit.js": "^2.0.2"
   },
-  "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
-  },
+ 
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@commitlint/cli": "^11.0.0",
