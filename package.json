@@ -104,7 +104,8 @@
   "lint-staged": {
     "src/**/*.{tsx,ts}": [
       "npm run test:nowatch",
-      "npm run lint"
+      "npm run lint",
+      "npm run build-storybook"
     ]
   }
 }
