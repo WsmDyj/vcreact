@@ -15,7 +15,7 @@
     "start": "start-storybook -p 6006 -c .storybook",
     "build-ts": "tsc -p tsconfig.build.json",
     "build:css": "lessc ./src/components/style/index.less ./dist/index.css",
-    "build-storybook": "build-storybook  -c .storybook -o storybook-static",
+    "build-storybook": "build-storybook -c .storybook -o storybook-static",
     "prepublishOnly": "npm run test:nowatch && npm run lint && npm run build"
   },
   "license": "MIT",
