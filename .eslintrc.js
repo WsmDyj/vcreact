@@ -32,10 +32,17 @@ module.exports = {
     'prettier/prettier': 'error',
     'no-var-requires': 'off',
     "react/prop-types": 'off',
+    
+    "react-hooks/exhaustive-deps": "off",
     'comma-dangle': ['error', 'never'],
     '@typescript-eslint/no-var-requires': ['off'],
     '@typescript-eslint/no-unused-vars': ['error'],
     'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': ['error']
+    "@typescript-eslint/no-unused-vars": 'off',
+    "@typescript-eslint/ban-types": 'off',
+    '@typescript-eslint/no-use-before-define': ['error'],
+    "@typescript-eslint/explicit-function-return-type": ['off'],
+    "@typescript-eslint/explicit-module-boundary-types": ['off'],
+    "@typescript-eslint/no-explicit-any": ["off"]
   }
 }

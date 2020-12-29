@@ -1,10 +1,10 @@
 import { configure } from '@storybook/react'
 import getSortNumByMenu from './menu'
-import '../src/styles/index.scss'
+import '../src/components/style/index'
 import './preview.scss'
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" }
+  actions: { argTypesRegex: "^on[A-Z].*" },
 }
 
 const loaderFn = () => {

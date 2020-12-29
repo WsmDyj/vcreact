@@ -1,0 +1,69 @@
+import { Meta,Story, Preview, Props, Title, Subtitle } from "@storybook/addon-docs/blocks"
+import Message from '../index'
+import Button from '../../Button'
+import Demo from './Demo'
+
+<Meta title="组件/反馈/Message  消息提示"  />
+
+<Title children={"全局提示"} />
+
+<Subtitle children={"Message"} />
+
+悬浮出现在页面/区块顶部，展示系统对主动操作行为作出的反馈信息。
+
+###  使用场景及规则
+* 可提供消息提示、成功、错误、警告或加载等反馈信息；
+* 显示一段时间（默认为 3 秒，可自定义时长）后自动消失，是一种不打断用户操作的轻量级提示；
+* 文案长度建议少于二十个文字；
+* 不随页面滚动，固定在页面/区块（如弹框）顶部剧中显示。
+
+### 基础样式
+从顶部出现，3 秒后自动消失。
+<Preview>
+  <Button onClick={() => {Message.info({content: '这是一条信息的提示'})}}>
+    消息
+  </Button>
+  <Button onClick={() => {Message.success({content: '这是一条成功的提示'})}}>
+    成功
+  </Button>
+  <Button onClick={() => {Message.error({content: '这是一条失败的提示'})}}>
+    失败
+  </Button>
+  <Button onClick={() => {Message.warning({content: '这是一条警告的提示'})}}>
+    警告
+  </Button>
+  <Button onClick={() => {Message.loading({content: '正在加载中'})}}>
+    加载
+  </Button>
+</Preview>
+
+### 更新消息内容
+可以通过唯一的 key 来更新内容。
+<Preview>
+  <Button
+    onClick={() => {
+      Message.loading({content: '拼命加载中', key: 'updatable'})
+      setTimeout(() => {
+        Message.success({ content: '加载完成!', key: 'updatable' })
+      }, 2000)
+    }}>
+    加载
+  </Button>
+</Preview>
+
+### 自定义图标
+type 取值 'info' | 'success' | 'error' | 'warning' | 'loading' 自带icon，无需配置
+<Preview>
+  <Button onClick={() => {Message.open({content: '正在搜索中...', type: 'info', icon: 'search'})}}>
+    自定义图标
+  </Button>
+</Preview>
+
+### API
+
+```tsx
+import { Message } from "vcreact"
+```
+
+<Props of={Demo} />
+

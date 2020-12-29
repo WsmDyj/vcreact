@@ -1,9 +1,8 @@
 import { Meta,Story, Preview, Props, Title, Subtitle } from "@storybook/addon-docs/blocks"
-import Icon from "../../Icon"
-import Demo from './Demo'
-import "./demo.scss"
+import Icon from '../../Icon'
+import "./stories.less"
 
-<Meta title="基础/图标 Iconfont" component={Icon} />
+<Meta title="基础/Iconfont 图标" component={Icon} />
 
 <Title children={"图标"} />
 
@@ -12,35 +11,83 @@ import "./demo.scss"
 用于展示 ICON。该组件的 ICON 图形基于 [Font Awesome](https://fontawesome.com/icons?d=listing&m=free)中提供的免费开源版本库
 
 ### 使用指南
-使用<Icon />组件，指定图标对应的type属性，示例代码：
+使用 **Icon** 组件，指定图标对应的 className 属性，示例代码：
 ```tsx
 
-<Icon icon="address-book" />
+<Icon className="address-book" />
 
 ```
 
 ### 图标集合
-
+这里只展示了一些常用的图标集合，点这里跳转到[1609个图标合集](https://fontawesome.com/icons?d=gallery&m=free)
 <Preview>
   <div className="icon-demo-list">
     <div className="icon-item">
-      <Icon icon="address-book"/>
+      <Icon className="address-book" size='2x'/>
       address-book
     </div>
     <div className="icon-item">
-      <Icon icon="angle-left"/>
+      <Icon className="angle-double-down" size='2x'/>
+      angle-double-down
+    </div>
+    <div className="icon-item">
+      <Icon className="angle-double-left" size='2x'/>
+      angle-double-left
+    </div>
+    <div className="icon-item">
+      <Icon className="angle-double-right" size='2x'/>
+      angle-double-right
+    </div>
+    <div className="icon-item">
+      <Icon className="angle-double-up" size='2x'/>
+      angle-double-up
+    </div>
+    <div className="icon-item">
+      <Icon className="angle-down" size='2x'/>
+      angle-down
+    </div>
+    <div className="icon-item">
+      <Icon className="angle-left" size='2x'/>
       angle-left
+    </div>
+    <div className="icon-item">
+      <Icon className="angle-right" size='2x'/>
+      angle-right
+    </div>
+    <div className="icon-item">
+      <Icon className="angle-up" size='2x'/>
+      angle-up
+    </div>
+    <div className="icon-item">
+      <Icon className="arrow-down" size='2x'/>
+      arrow-down
+    </div>
+    <div className="icon-item">
+      <Icon className="arrow-up" size='2x'/>
+      arrow-up
+    </div>
+    <div className="icon-item">
+      <Icon className="arrow-left" size='2x'/>
+      arrow-left
+    </div>
+    <div className="icon-item">
+      <Icon className="arrow-right" size='2x'/>
+      arrow-right
     </div>
   </div>
 </Preview>
 
-### 动画图标
-使用spin该类可旋转任何图标，pulse类用八个步骤来旋转Icon
+### 其他属性
+使用spin该类可旋转任何图标，pulse类用八个步骤来旋转，rotation旋转角度，size图标大小
 <Preview>
-  <Icon icon="circle-notch" spin/>
-  <Icon icon="spinner" pulse />
+  <Icon className="circle-notch" size='2x' spin/>
+  <Icon className="spinner" size='2x' pulse />
+  <Icon className="ad" size='2x' rotation = {90} />
 </Preview>
 
 ### API
-Icon的配置参数 
-<Props of={Demo} />
+
+```tsx
+import { Icon } from "vcreact"
+```
+<Props of={Icon} />

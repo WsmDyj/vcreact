@@ -1,0 +1,100 @@
+import { Meta, Story, Preview, Props, Title, Subtitle } from "@storybook/addon-docs/blocks"
+import Modal from '../index'
+import Button from '../../Button'
+import Icon from '../../Icon'
+
+<Meta title="组件/反馈/Modal 对话框" component={Modal} />
+
+<Title children={"通知提醒"} />
+
+<Subtitle children={"Modal"} />
+
+在保留当前页面的情况下，用于消息提示、确认消息和提交内容等操作的辅助窗口。
+### 基本用法
+可直接在dom中渲染，通过visible控制显示与否，常用于弹出窗口用于表单提交等自定义内容展示
+
+```tsx
+<Modal visible>
+  <p>Some contents...</p>
+</Modal>
+```
+### 对话框
+使用 confirm() 可以快捷地弹出确认框。onCancel/onOk 回调函数
+<Preview>
+  <Button onClick={() => {
+    Modal.confirm({
+    title: 'Do you Want to delete these items?',
+    icon: <Icon className='angry' />,
+    content: 'Some descriptions',
+    onOk() {
+      console.log('OK');
+    },
+    onCancel() {
+      console.log('Cancel');
+    },
+  })
+  }}>
+    自定义icon
+  </Button>
+</Preview>
+
+### 信息提示
+
+各种类型的信息提示，只提供一个按钮用于关闭。
+
+<Preview>
+  <Button onClick={() => {
+    Modal.info({
+      title: '标题',
+      content: '这是信息弹窗描述',
+      onOk() {
+        console.log('OK');
+      },
+      onCancel() {
+        console.log('Cancel');
+      },
+    });
+  }}>
+    信息提示
+  </Button>
+  <Button onClick={() => {
+    Modal.success({
+      content: '这是成功弹窗描述',
+      onOk() {
+        console.log('OK');
+      },
+    });
+  }}>
+    成功提示
+  </Button>
+  <Button onClick={() => {
+    Modal.error({
+      title: '标题',
+      content: '这是错误弹窗描述',
+      onOk() {
+        console.log('OK');
+      },
+    });
+  }}>
+    错误提示
+  </Button>
+  <Button onClick={() => {
+    Modal.warning({
+      title: '标题',
+      content: '这是警告弹窗描述',
+      onOk() {
+        console.log('OK');
+      },
+    });
+  }}>
+    警告提示
+  </Button>
+ 
+</Preview>
+
+### API
+
+```tsx
+import { Modal } from "vcreact"
+```
+<Props of={Modal} />

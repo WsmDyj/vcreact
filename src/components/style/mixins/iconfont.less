@@ -1,0 +1,27 @@
+.iconfont-mixin() {
+  display: inline-block;
+  color: @icon-color;
+  font-style: normal;
+  line-height: 0;
+  text-align: center;
+  text-transform: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  > * {
+    line-height: 1;
+  }
+
+  svg {
+    display: inline-block;
+  }
+
+  &::before {
+    display: none; // dont display old icon.
+  }
+
+  & &-icon {
+    display: block;
+  }
+}

@@ -1,0 +1,82 @@
+import { Meta,Story, Preview, Props, Title, Subtitle } from "@storybook/addon-docs/blocks"
+import Notification from '../index'
+import Button from '../../Button'
+import Demo from './Demo'
+
+<Meta title="组件/反馈/Notification  通知提醒"  />
+
+<Title children={"通知提醒"} />
+
+<Subtitle children={"Notification"} />
+
+悬浮出现在页面角落，显示全局的被动通知提醒消息。
+
+###  使用场景及规则
+* 较为复杂的通知内容;
+* 显示一段时间（默认为 3 秒，可自定义时长）后自动消失；
+* 带有交互的通知，给出用户下一步的行动点；
+* 不随页面滚动，可以让 Notification 从屏幕四角中的任意一角弹出。
+
+### 基础样式
+通知弹出后将在 3s 后自动关闭，可手动点击关闭按钮关闭提示。
+<Preview>
+  <Button onClick={() => {Notification.open({title: '标题', type: 'info'})}}>
+    仅通知标题
+  </Button>
+  <Button onClick={() => {Notification.open({title: '标题', description: '这是描述这是描述这是描述这是描述这是描述', type: 'info'})}}>
+    通知标题+描述
+  </Button>
+   <Button onClick={() => {Notification.open({title: '自定义图标', description: '这是自定义图标描述', type: 'info', icon: 'search'})}}>
+    自定义图标
+  </Button>
+  <Button onClick={() => {Notification.open({title: '不带图标', description: '这是不带图标的描述'})}}>
+    不带图标
+  </Button>
+  <Button onClick={() => {Notification.open({title: '不带关闭按钮', description: '这是不带关闭按钮的描述', type: 'info', closable: false})}}>
+    不带关闭按钮
+  </Button>
+</Preview>
+
+
+### 带有倾向性
+带有 icon，常用来显示「成功、警告、消息、错误」类的系统消息
+<Preview>
+  <Button onClick={() => {Notification.info({title: '标题', description: '这是描述这是描述这是描述这是描述这是描述'})}}>
+    消息
+  </Button>
+  <Button onClick={() => {Notification.success({title: '标题', description: '这是描述这是描述这是描述这是描述这是描述'})}}>
+    成功
+  </Button>
+  <Button onClick={() => {Notification.warning({title: '标题', description: '这是描述这是描述这是描述这是描述这是描述'})}}>
+    警告
+  </Button>
+  <Button onClick={() => {Notification.error({title: '标题', description: '这是描述这是描述这是描述这是描述这是描述'})}}>
+    错误
+  </Button>
+</Preview>
+
+### 自定义弹出位置
+可以让 Notification 从屏幕四角中的任意一角弹出
+<Preview>
+  <Button onClick={() => {Notification.open({title: '标题', description: '这是描述这是描述这是描述这是描述这是描述', type: 'info', placement: 'topRight'})}}>
+    右上角
+  </Button>
+  <Button onClick={() => {Notification.open({title: '标题', description: '这是描述这是描述这是描述这是描述这是描述', type: 'info', placement: 'bottomRight'})}}>
+    右下角
+  </Button>
+  <Button onClick={() => {Notification.open({title: '标题', description: '这是描述这是描述这是描述这是描述这是描述', type: 'info', placement: 'topLeft'})}}>
+    左上角
+  </Button>
+  <Button onClick={() => {Notification.open({title: '标题', description: '这是描述这是描述这是描述这是描述这是描述', type: 'info', placement: 'bottomLeft'})}}>
+    左下角
+  </Button>
+</Preview>
+
+### API
+
+```tsx
+import { Notification } from "vcreact"
+```
+
+<Props of={Demo} />
+

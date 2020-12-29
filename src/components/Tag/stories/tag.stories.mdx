@@ -1,0 +1,59 @@
+import { Meta,Story, Preview, Props, Title, Subtitle } from "@storybook/addon-docs/blocks"
+import Tag from '../../Tag'
+import Icon from '../../Icon'
+import Message from '../../Message'
+
+<Meta title="组件/通用/Tag 标签" component={Tag} />
+
+<Title children={"标签"} />
+
+<Subtitle children={"Tag"} />
+
+进行标记和分类的小标签。
+
+### 基础用法
+
+<Preview>
+  <Tag color="success">success</Tag>
+  <Tag color="processing">processing</Tag>
+  <Tag color="error">error</Tag>
+  <Tag color="warning">warning</Tag>
+  <Tag>default</Tag>
+</Preview>
+
+### 多彩标签
+Tag 组件内置了下面多种标签类型，只需要在color属性上传入对应值即可。
+<Preview>
+  <Tag color='magenta'>magenta</Tag>
+  <Tag color="red">red</Tag>
+  <Tag color="volcano">volcano</Tag>
+  <Tag color="orange">orange</Tag>
+  <Tag color="gold">gold</Tag>
+  <Tag color="lime">lime</Tag>
+  <Tag color="green">green</Tag>
+  <Tag color="cyan">cyan</Tag>
+  <Tag color="blue">blue</Tag>
+  <Tag color="geekblue">geekblue</Tag>
+  <Tag color="purple">purple</Tag>
+</Preview>
+
+### 带图标标签
+<Preview>
+  <Tag color="success" icon={<Icon className="check-circle"/>} >success</Tag>
+  <Tag color="error" icon={<Icon className="times-circle"/>} >error</Tag>
+  <Tag color="processing" icon={<Icon className="sync" spin/>} >processing</Tag>
+</Preview>
+
+### 可移除标签
+基本标签的用法，可以通过添加 closable 变为可关闭标签。可关闭标签具有 onClose 回调事件。
+<Preview>
+  <Tag>Unremovable</Tag>
+  <Tag closable>Tag 2</Tag>
+  <Tag closable onClose={() => {Message.open({content: '点击关闭回调信息', type: 'info'})}}>Tag 3</Tag>
+</Preview>
+
+### API
+```tsx
+import { Tag } from "vcreact"
+```
+<Props of={Tag} />

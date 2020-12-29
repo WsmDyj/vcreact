@@ -23,8 +23,7 @@ npm install --save vcreact
 ```tsx
 import React from "react";
 import ReactDOM from "react-dom";
-import { Countdown } from "@jdcfe/legao";
-import "@jdcfe/legao/dist/@jdcfe/legao.css"; //引入样式 如果你选择了按需加载方式则不需要引入
+import { Countdown } from "vcreact";
 ReactDOM.render(
   <Countdown leftTime={100000}>
     {({ dayStr, hourStr, minuteStr, secondStr }) => (
@@ -39,7 +38,6 @@ ReactDOM.render(
 
 ### 按需加载(2.0+)
 
-> legao 2.0 版本开始 JS 代码默认支持基于 ES modules 的 tree shaking。
 
 下面方式可以**只加载**用到的组件
 
@@ -53,7 +51,6 @@ ReactDOM.render(
         [
           "import",
           {
-            "libraryName": "@jdcfe/legao",
             "libraryDirectory": "lib",
             "style": true,//`style: "css"`会加载css文件, `style: true` 会加载 scss 文件,则必须引入sass-loader
             "camel2DashComponentName":false
@@ -68,5 +65,5 @@ ReactDOM.render(
   ```tsx
   // babel-plugin-import 会帮助你加载 JS 和 css
 
-  import { Button } from "@jdcfe/legao";
+  import { Button } from "vcreact";
   ```

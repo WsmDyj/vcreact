@@ -7,6 +7,17 @@
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
+  "scripts": {
+    "lint": "eslint --ext js,ts,tsx src --max-warnings 5",
+    "build": "rimraf ./dist && npm run build-ts && npm run build:css",
+    "test": "react-scripts test",
+    "test:nowatch": "cross-env CI=true react-scripts test",
+    "start": "start-storybook -p 6006 -c .storybook",
+    "build-ts": "tsc -p tsconfig.build.json",
+    "build:css": "lessc ./src/components/style/index.less ./dist/index.css",
+    "build-storybook": "build-storybook  -c .storybook -o storybook-static",
+    "prepublishOnly": "npm run test:nowatch && npm run lint && npm run build"
+  },
   "license": "MIT",
   "keywords": [
     "Component",
@@ -22,7 +33,8 @@
     "dist"
   ],
   "dependencies": {
-    "classnames": "^2.2.6"
+    "classnames": "^2.2.6",
+    "omit.js": "^2.0.2"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
@@ -32,9 +44,10 @@
     "@babel/core": "^7.11.6",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
-    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/fontawesome-common-types": "^0.2.32",
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
-    "@fortawesome/react-fontawesome": "^0.1.11",
+    "@fortawesome/react-fontawesome": "^0.1.13",
     "@storybook/addon-actions": "^6.0.21",
     "@storybook/addon-essentials": "^6.0.21",
     "@storybook/addon-links": "^6.0.21",
@@ -58,25 +71,21 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.2",
     "husky": "^4.3.0",
+    "less": "^2.7.3",
+    "less-loader": "^7.1.0",
     "lint-staged": "^10.4.0",
     "node-sass": "^4.14.1",
+    "omit": "^1.0.1",
     "prettier": "^2.1.2",
+    "rc-dialog": "^8.4.3",
+    "rc-motion": "^2.4.1",
+    "rc-notification": "^4.5.4",
+    "rc-tween-one": "^2.7.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-is": "^16.13.1",
     "react-scripts": "^3.4.3",
     "typescript": "~3.7.2"
-  },
-  "scripts": {
-    "lint": "eslint --ext js,ts,tsx src --max-warnings 5",
-    "build": "rimraf ./dist && npm run build-ts && npm run build-css",
-    "test": "react-scripts test",
-    "test:nowatch": "cross-env CI=true react-scripts test",
-    "start": "start-storybook -p 6006 -c .storybook",
-    "build-ts": "tsc -p tsconfig.build.json",
-    "build-css": "node-sass ./src/styles/index.scss  ./dist/index.css",
-    "build-storybook": "build-storybook  -c .storybook -o storybook-static",
-    "prepublishOnly": "npm run test:nowatch && npm run lint && npm run build"
   },
   "browserslist": {
     "production": [

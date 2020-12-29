@@ -1,0 +1,61 @@
+import { Meta,Story, Preview, Props, Title, Subtitle } from "@storybook/addon-docs/blocks"
+import Alert from '../index'
+import Button from '../../Button'
+
+<Meta title="组件/反馈/Alert 横幅警告" component={Alert} />
+
+<Title children={"横幅警告"} />
+
+<Subtitle children={"Alert"} />
+
+警告提示，展现需要关注的信息。
+
+### 使用场景及规则
+* 当某个页面需要向用户显示警告的信息时。
+* 非浮层的静态展现形式，始终展现，不会自动消失，用户可以点击关闭。
+
+### 基础用法
+页面中的非浮层元素，不会自动消失。
+<Preview>
+  <div className="code-box-demo">
+    <Alert title="信息提示文本" type="info" />
+    <Alert title="成功提示文本" type="success" />
+    <Alert title="警告提示文本" type="warning" />
+    <Alert title="错误提示文本" type="error" />
+  </div>
+</Preview>
+
+### 自定义icon
+type 取值 'info' | 'success' | 'error' | 'warning' 自带icon，无需配置
+<Preview>
+  <div className="code-box-demo">
+    <Alert title="成功提示文本" type="success" showIcon />
+    <Alert title="警告提示文本" type="warning" showIcon />
+    <Alert title="错误提示文本" type="error" showIcon />
+    <Alert title="自定义图标" type="info" showIcon icon="bell" />
+  </div>
+</Preview>
+
+### 关闭按钮
+自定义关闭按钮为文字或其他符号，onClose 关闭的回调函数。
+<Preview>
+  <div className="code-box-demo">
+    <Alert title="信息提示文本" type="info" closable />
+    <Alert title="警告提示文本" type="warning" closeText='知道了' onClose={() => alert('点击关闭回调方法')} />
+  </div>
+</Preview>
+
+### 带有辅助性文字介绍
+包含标题和内容，解释更详细的警告。
+<Preview>
+  <div className="code-box-demo">
+    <Alert title="这里是信息提示文本" type="info" description='文字说明文字说明文字说明文字说明文字说明文字说明' />
+    <Alert title="成功提示的文案" showIcon type="success" description='文字说明文字说明文字说明文字说明文字说明文字说明' />
+  </div>
+</Preview>
+
+### API
+```tsx
+import { Alert } from "vcreact"
+```
+<Props of={Alert} />

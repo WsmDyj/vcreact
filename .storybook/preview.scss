@@ -1,4 +1,4 @@
-#docs-root {
+.sbdocs {
   font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC,
     Microsoft YaHei, Simsun, Helvetica, Arial;
   -webkit-font-smoothing: antialiased !important;
@@ -6,7 +6,6 @@
   color: #434343;
   background: #fff !important;
 }
-
 * {
   outline: none;
 }
@@ -30,7 +29,6 @@
   margin-bottom: 16px;
   font-family: unset;
   font-size: 28px;
-  color: #aaa;
   padding-left: 16px;
   font-weight: 700;
 }
@@ -39,11 +37,6 @@
   font-family: unset;
 }
 /** body */
-.sbdocs-wrapper {
-  &.css-t7viak.css-t7viak {
-    padding: 80px;
-  }
-}
 .sbdocs-content {
   width: 100%;
   &.css-1gh4yjl.css-1gh4yjl {
@@ -51,7 +44,7 @@
   }
 }
 .sbdocs-wrapper.css-t7viak.css-t7viak {
-  padding: 60px 80px 80px 80px;
+  padding: 80px !important;
 }
 .css-1x402t {
   margin: 0!important;
@@ -88,7 +81,7 @@
 
 /** body title */
 .sbdocs-h3.sbdocs-h3 {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
   margin-top: 48px;
   margin-bottom: 13px;
@@ -218,4 +211,8 @@
 }
 .css-6hhrgj tr:last-child th:first-child {
   border-bottom-left-radius: 0px!important;
+}
+.css-16d4d7t {
+  background-color: transparent!important;
+  border: none!important;
 }
