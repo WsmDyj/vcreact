@@ -1,7 +1,7 @@
 import React from 'react'
 import Dialog from 'rc-dialog'
 import { ConfigContext } from '../Config'
-import Button, { ButtonType } from '../Button'
+import Button, { ButtonType, ButtonProps } from '../Button'
 import Icon from '../Icon'
 
 export interface ModalProps {
@@ -43,6 +43,10 @@ export interface ModalProps {
   onCancel?: (e: React.MouseEvent<HTMLElement>) => void
   /** 点击确定回调 */
   onOk?: (e: React.MouseEvent<HTMLElement>) => void
+  /** 确定按钮样式 */
+  okButtonProps?: ButtonProps
+  /** 取消按钮样式 */
+  cancelButtonProps?: ButtonProps
 }
 
 export interface ModalLocale {
@@ -96,6 +100,9 @@ const Modal: React.FC<ModalProps> = (props) => {
   )
 }
 
+// Module.info = function infoFn(props: ModuleProps) {
+//   return confirm(withInfo(props))
+// }
 Modal.defaultProps = {
   width: 520,
   transitionName: 'zoom',

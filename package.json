@@ -10,7 +10,7 @@
   "scripts": {
     "lint": "eslint --ext js,ts,tsx src --max-warnings 5",
     "build": "rimraf ./dist && npm run build-ts && npm run build:css",
-    "test": "cross-env CI=true react-scripts test",
+    "test": "cross-env CI=true react-scripts test --passWithNoTests",
     "start": "start-storybook -p 6006 -c .storybook",
     "build-ts": "tsc -p tsconfig.build.json",
     "build:css": "lessc ./src/components/style/index.less ./dist/index.css",
