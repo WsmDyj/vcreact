@@ -6,8 +6,12 @@ node_js:
 cache:
   directories:
     - node_modules
+install:
+  npm i @storybook/react@6.0.12
 env:
   - CI=ture
+script:
+  - npm run build-storybook
 deploy:
   provider: pages
   skip_cleanup: true

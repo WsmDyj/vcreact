@@ -17,27 +17,7 @@
   } catch (e) {
     // eslint-disable-next-line no-console
     console.warn('unable to connect to top frame for connecting dev tools');
-  }
-
-  window.onerror = function onerror(message, source, line, column, err) {
-    if (window.CONFIG_TYPE !== 'DEVELOPMENT') return;
-    // eslint-disable-next-line no-var, vars-on-top
-    var xhr = new window.XMLHttpRequest();
-    xhr.open('POST', '/runtime-error');
-    xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
-    xhr.send(
-      JSON.stringify({
-        /* eslint-disable object-shorthand */
-        message: message,
-        source: source,
-        line: line,
-        column: column,
-        error: err && { message: err.message, name: err.name, stack: err.stack },
-        origin: 'manager',
-        /* eslint-enable object-shorthand */
-      })
-    );
-  };</script><style>body {
+  }</script><style>body {
     font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC,
       Microsoft YaHei, Simsun, Helvetica, Arial !important;
     -webkit-font-smoothing: antialiased;
@@ -349,11 +329,7 @@
   }</style><link rel="icon" type="image/png" href="//www.jd.com/favicon.ico"/><div class="_header-wrap"><div class="_header-box"><a href="" class="_logo-box"><img class="_logo-box_img" src="https://img14.360buyimg.com/imagetools/jfs/t1/132088/39/10629/5473/5f699464E5160846d/c066c0996d40268f.png"/> <span class="_logo-box_text">Vc React</span></a><ul class="_nav-list"><li class="_nav-item _has-drop"><a href="" class="">首页</a></li><li class="_nav-item _has-drop _current"><a href="">组件</a></li><li class="_nav-item _has-drop _gh-ico"><a href="https://github.com/WsmDyj/vcreact"></a></li></ul></div></div><style>#root[hidden],
       #docs-root[hidden] {
         display: none !important;
-      }</style></head><body><div id="root"></div><div id="docs-root"></div><script>window['CONFIG_TYPE'] = "PRODUCTION";
-            
-        
-            
-              window['LOGLEVEL'] = "info";
+      }</style></head><body><div id="root"></div><div id="docs-root"></div><script>window['LOGLEVEL'] = "info";
             
         
             
@@ -361,4 +337,4 @@
             
         
             
-              window['DOCS_MODE'] = false;</script><script src="runtime~main.870e8ee0658e83d05c6b.bundle.js"></script><script src="vendors~main.0c48bc66ec0ca56f4c6f.bundle.js"></script><script src="main.34abdf6259cb3a10b17b.bundle.js"></script></body></html>
+              window['DOCS_MODE'] = false;</script><script src="./sb_dll/storybook_ui_dll.js"></script><script src="runtime~main.870e8ee0658e83d05c6b.bundle.js"></script><script src="vendors~main.8c535f8b15a1d00228a1.bundle.js"></script><script src="main.ed5081f4600e78eb29f4.bundle.js"></script></body></html>
