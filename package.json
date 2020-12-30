@@ -10,13 +10,12 @@
   "scripts": {
     "lint": "eslint --ext js,ts,tsx src --max-warnings 5",
     "build": "rimraf ./dist && npm run build-ts && npm run build:css",
-    "test": "react-scripts test",
-    "test:nowatch": "cross-env CI=true react-scripts test",
+    "test": "cross-env CI=true react-scripts test",
     "start": "start-storybook -p 6006 -c .storybook",
     "build-ts": "tsc -p tsconfig.build.json",
     "build:css": "lessc ./src/components/style/index.less ./dist/index.css",
     "build-storybook": "build-storybook -c .storybook -o storybook-static",
-    "prepublishOnly": "npm run test:nowatch && npm run lint && npm run build"
+    "prepublishOnly": "npm run test && npm run lint && npm run build"
   },
   "license": "MIT",
   "keywords": [
@@ -103,9 +102,8 @@
   },
   "lint-staged": {
     "src/**/*.{tsx,ts}": [
-      "npm run test:nowatch",
-      "npm run lint",
-      "npm run build-storybook"
+      "npm run test",
+      "npm run lint"
     ]
   }
 }
