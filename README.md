@@ -1,44 +1,71 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# VC React
 
-## Available Scripts
+基于TypeScript开发的React轻量级组件库
 
-In the project directory, you can run:
+## 安装与使用
 
-### `yarn start`
+安装与使用请移步我们的[文档站](https://wsmdyj.github.io/vcreact)。
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 开发
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+#### 代码结构
 
-### `yarn test`
+源码均在 [src 目录](./src)内。每个组件有自己的子目录。最终所有组件统一在 [src/index.js](./src/index.js) 中 export 出来。
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### 开发
 
-### `yarn build`
+RUN `npm run dev`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### 构建文档站
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+RUN `npm run build-storybook`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### 构建
 
-### `yarn eject`
+RUN `npm run build`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### 组件文档
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+基于 Storybook 中 addons-docs `mdx`语法，请在组件同级创建 `stories` 目录，新建同名说明文档，ex. `Button.stories.mdx`。
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### 代码规范
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+使用 `eslint` 规范
 
-## Learn More
+#### 编辑器
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+我们推荐使用 [Visual Studio Code](https://code.visualstudio.com/)。
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+为了更好的开发体验，我们建议使用 **prettier** 进行在开发和提交阶段进行代码格式化，配置如下：
+
+```json
+...
+"[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true
+},
+"[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true
+},
+"[mdx]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true
+},
+...
+```
+
+## 测试
+
+执行 `npm run test` 运行单元测试。
+
+我们的单元测试使用 Facebook 开源的 [jest](https://facebook.github.io/jest/) 框架编写。如果你之前没接触过，请移步 [jest 文档](https://facebook.github.io/jest/docs/en/getting-started.html)学习。
+
+** ❤ 作为一名靠谱的工程师，请为你提交的修改编写相应的单元测试 ❤ **
+
+## 讨论 / 问题反馈 / 建议
+
+目前还在搭建中...

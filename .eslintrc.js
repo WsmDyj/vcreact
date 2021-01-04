@@ -32,7 +32,6 @@ module.exports = {
     'prettier/prettier': 'error',
     'no-var-requires': 'off',
     "react/prop-types": 'off',
-    
     "react-hooks/exhaustive-deps": "off",
     'comma-dangle': ['error', 'never'],
     '@typescript-eslint/no-var-requires': ['off'],
