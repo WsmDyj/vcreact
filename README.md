@@ -14,15 +14,15 @@
 
 #### 开发
 
-RUN `npm run dev`
+`npm run start`
 
 #### 构建文档站
 
-RUN `npm run build-storybook`
+`npm run build-storybook`
 
 #### 构建
 
-RUN `npm run build`
+`npm run build`
 
 #### 组件文档
 
