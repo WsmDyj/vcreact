@@ -64,7 +64,7 @@
 
 我们的单元测试使用 Facebook 开源的 [jest](https://facebook.github.io/jest/) 框架编写。如果你之前没接触过，请移步 [jest 文档](https://facebook.github.io/jest/docs/en/getting-started.html)学习。
 
-** ❤ 作为一名靠谱的工程师，请为你提交的修改编写相应的单元测试 ❤ **
+**❤ 作为一名靠谱的工程师，请为你提交的修改编写相应的单元测试 ❤**
 
 ## 讨论 / 问题反馈 / 建议
 

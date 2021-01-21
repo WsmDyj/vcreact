@@ -1,0 +1,47 @@
+import { Meta,Story, Preview, Props, Title, Subtitle } from "@storybook/addon-docs/blocks"
+import Switch from '../index'
+import Icon from '../../Icon'
+
+<Meta title="组件/选择/Switch 按钮" component={Switch} />
+
+<Title children={"开关"} />
+
+<Subtitle children={"Switch"} />
+
+开关是允许用户打开或关闭选项的切换器。开关控件向用户显示两个互拆的选项（如开/关）,选择其中一个选项会即刻生效。
+
+### 使用场景及规则
+* 用于需要表示【开、关】或者其他互斥两种状态之间的切换，如启用或禁用设备执行的操作；
+* 当需要操作即刻生效时，使用开关；当用户必须执行额外的步骤才能使用更改生效时，使用复选框。。
+
+### 基础用法
+<Preview>
+  <Switch />
+  <Switch size='small' />
+  <Switch loading defaultChecked />
+  <Switch disabled defaultChecked />
+</Preview>
+
+### 带有文字和图标
+<Preview>
+  <Switch checkedChildren="开启" unCheckedChildren="关闭" defaultChecked />
+  <Switch
+    checkedChildren={<Icon icon="check"/>}
+    unCheckedChildren={<Icon icon="times"/>}
+  />
+</Preview>
+
+### 点击事件
+<Preview>
+  <Switch onChange={(checked) => alert(checked)} />
+</Preview>
+
+
+### API
+
+```tsx
+import { Switch } from "vcreact"
+```
+
+<Props of={Switch} />
+

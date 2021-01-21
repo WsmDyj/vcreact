@@ -6,7 +6,8 @@ const menuSort = {
   Message: 4,
   Notification: 5,
   Alert: 6,
-  Modal: 7
+  Modal: 7,
+  Switch: 8
 }
 
 export default function getSortNumByMenu(menu) {

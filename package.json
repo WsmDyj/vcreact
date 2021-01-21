@@ -75,6 +75,7 @@
     "rc-dialog": "^8.4.3",
     "rc-motion": "^2.4.1",
     "rc-notification": "^4.5.4",
+    "rc-switch": "^3.2.0",
     "rc-tween-one": "^2.7.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
