@@ -1,0 +1,42 @@
+import { Meta,Story, Preview, Props, Title, Subtitle } from "@storybook/addon-docs/blocks"
+import Checkbox from '../index'
+
+<Meta title="组件/选择/Checkbox 多选框" component={Checkbox} />
+
+<Title children={"多选框"} />
+
+<Subtitle children={"Checkbox"} />
+
+允许用户在一组选项中选择或取消多个选项
+
+### 基础用法
+<Preview>
+  <Checkbox>常态</Checkbox>
+  <Checkbox disabled>禁用</Checkbox>
+  <Checkbox disabled defaultChecked>不可用</Checkbox>
+  <Checkbox defaultChecked>默认选中</Checkbox>
+</Preview>
+
+### 文字选框
+与基本样式相比，更容易区分选项间的界限。但选项字数不宜过多且尽量保持统一，建议最多不超过6个字。
+<Preview>
+  <Checkbox fontStyle>常态</Checkbox>
+  <Checkbox fontStyle defaultChecked>已选中</Checkbox>
+  <Checkbox fontStyle disabled>禁用</Checkbox>
+  <Checkbox fontStyle defaultChecked disabled>已选不可点击态</Checkbox>
+</Preview>
+
+### 点击事件
+<Preview>
+  <Checkbox onChange={() => alert('点击了')}>点击</Checkbox>
+  <Checkbox fontStyle onChange={() => alert('点击了')}>常态</Checkbox>
+</Preview>
+
+### API
+
+```tsx
+import { Checkbox } from "vcreact"
+```
+
+<Props of={Checkbox} />
+
