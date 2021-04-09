@@ -1,7 +1,7 @@
 import { configure } from '@storybook/react'
 import getSortNumByMenu from './menu'
 import '../src/components/style/index'
-import './preview.scss'
+import './preview.css'
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

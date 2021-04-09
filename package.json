@@ -69,7 +69,6 @@
     "less": "^2.7.3",
     "less-loader": "^4.1.0",
     "lint-staged": "^10.4.0",
-    "node-sass": "^4.14.1",
     "omit": "^1.0.1",
     "prettier": "^2.1.2",
     "rc-checkbox": "^2.3.2",

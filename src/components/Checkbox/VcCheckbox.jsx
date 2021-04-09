@@ -1,19 +1,15 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
 
-class Checkbox extends Component {
+class RcCheckbox extends Component {
   static defaultProps = {
     prefixCls: 'rc-checkbox',
     className: '',
     style: {},
     type: 'checkbox',
     defaultChecked: false,
-    onFocus() {},
-    onBlur() {},
-    onChange() {},
-    onKeyDown() {},
-    onKeyPress() {},
-    onKeyUp() {}
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
+    onChange: () => {}
   }
 
   constructor(props) {
@@ -89,9 +85,6 @@ class Checkbox extends Component {
       onClick,
       onFocus,
       onBlur,
-      onKeyDown,
-      onKeyPress,
-      onKeyUp,
       autoFocus,
       value,
       required,
@@ -127,9 +120,6 @@ class Checkbox extends Component {
           onClick={onClick}
           onFocus={onFocus}
           onBlur={onBlur}
-          onKeyUp={onKeyUp}
-          onKeyDown={onKeyDown}
-          onKeyPress={onKeyPress}
           onChange={this.handleChange}
           autoFocus={autoFocus}
           ref={this.saveInput}
@@ -142,4 +132,4 @@ class Checkbox extends Component {
   }
 }
 
-export default Checkbox
+export default RcCheckbox
